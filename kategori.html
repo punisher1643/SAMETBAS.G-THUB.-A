@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategoriler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .category {
+            flex: 1 1 calc(25% - 20px);
+            max-width: calc(25% - 20px);
+            background: #f8f8f8;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .category:hover {
+            transform: scale(1.05);
+            background-color: #e2e6ea;
+        }
+        .category img {
+            width: 100%;
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .category a {
+            text-decoration: none;
+            color:#ff3d00;
+            font-weight: bold;
+        }
+        .category a:hover {
+            color: #ff3d00;
+        }
+        @media (max-width: 768px) {
+            .category {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .category {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kategoriler</h1>
+        <div class="categories">
+            <div class="category">
+                <img src="img/ana yemek.jpg" alt="Elektronik">
+                <a href="#">Ana Yemekler</a>
+            </div>
+            <div class="category">
+                <img src="img/tatlılar.jpeg" alt="Moda">
+                <a href="#">Tatlılar</a>
+            </div>
+            <div class="category">
+                <img src="img/sıcak içecekler.webp" alt="Ev ve Yaşam">
+                <a href="#">Sıcak İçicekler</a>
+            </div>
+            <div class="category">
+                <img src="img/soğuk içecekler.jpeg" alt="Kitaplar">
+                <a href="#">Soğuk İçecekler</a>
+            </div>
+            <div class="category">
+                <img src="img/çorbalar.jpg" alt="Spor">
+                <a href="#">Çorbalar</a>
+            </div>
+            <div class="category">
+                <img src="img/indirim.png" alt="Oyuncaklar">
+                <a href="#">Kampanyalar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

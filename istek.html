@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İstek ve Şikayet Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #ff3d00;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        main {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, p {
+            margin-bottom: 1em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            margin-bottom: 1em;
+            padding: 0.8em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #ff3d00;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff3d00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>İstek ve Şikayet Sayfası</h1>
+    </header>
+    <main>
+        <h2>Bize Ulaşın</h2>
+        <p>Her türlü istek, şikayet ve geri bildiriminiz bizim için değerlidir. Lütfen aşağıdaki formu doldurarak bizimle paylaşın.</p>
+        <form action="/submit" method="post">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" placeholder="Adınızı giriniz" required>
+            
+            <label for="email">E-posta Adresiniz:</label>
+            <input type="email" id="email" name="email" placeholder="E-posta adresinizi giriniz" required>
+            
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" name="message" rows="5" placeholder="İstek veya şikayetinizi buraya yazınız..." required></textarea>
+            
+            <button type="submit">Gönder</button>
+        </form>
+    </main>
+</body>
+</html>

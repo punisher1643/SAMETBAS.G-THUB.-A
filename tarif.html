@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tariflerimiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .recipes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .recipe {
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+            background: #fefefe;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .recipe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .recipe img {
+            width: 100%;
+            height: auto;
+        }
+        .recipe-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .recipe-title {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .recipe-link {
+            text-decoration: none;
+            color: #ff3d00;;
+            font-weight: bold;
+        }
+        .recipe-link:hover {
+            color: #ff3d00;;
+        }
+        @media (max-width: 768px) {
+            .recipe {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .recipe {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tariflerimiz</h1>
+        <div class="recipes">
+            <div class="recipe">
+                <img src="img/baklava.jpeg" alt="Tarif 1">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Baklava Tarifi</h2>
+                    <a href="#" class="recipe-link">Tarifi Gör</a>
+                </div>
+            </div>
+            <div class="recipe">
+                <img src="img/iskender.jpeg" alt="Tarif 2">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">İskender Tarifi</h2>
+                    <a href="#" class="recipe-link">Tarifi Gör</a>
+                </div>
+            </div>
+            <div class="recipe">
+                <img src="img/içli köfte.jpeg" alt="Tarif 3">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">İçliköfte Tarifi</h2>
+                    <a href="#" class="recipe-link">Tarifi Gör</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepetiniz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+        table th {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .total {
+            font-size: 18px;
+            text-align: right;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #28a733;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sepetiniz</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ürün</th>
+                    <th>Adet</th>
+                    <th>Birim Fiyat</th>
+                    <th>Toplam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lahmacun</td>
+                    <td>1</td>
+                    <td>₺100</td>
+                    <td>₺100</td>
+                </tr>
+                <tr>
+                    <td>İskender</td>
+                    <td>1</td>
+                    <td>₺250</td>
+                    <td>₺250</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <strong>Genel Toplam: ₺350</strong>
+        </div>
+        <div class="actions">
+            <a href="#" class="btn">Satın Al</a>
+            <a href="#" class="btn" style="background-color: #ff3d00;;">Sepeti Temizle</a>
+        </div>
+    </div>
+</body>
+</html>

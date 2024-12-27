@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yorumlar Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .comment-form {
+            margin-bottom: 20px;
+        }
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        .comment-form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff3d00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comment-form button:hover {
+            background-color: #ff3d00;
+        }
+        .comments {
+            list-style-type: none;
+            padding: 0;
+        }
+        .comments li {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yorumlar</h1>
+        <div class="comment-form">
+            <textarea id="comment" placeholder="Yorumunuzu yazın..."></textarea>
+            <button onclick="addComment()">Yorumu Gönder</button>
+        </div>
+        <ul class="comments" id="commentsList">
+            <!-- Yorumlar burada görüntülenecek -->
+        </ul>
+    </div>
+
+    <script>
+        function addComment() {
+            const commentInput = document.getElementById('comment');
+            const commentsList = document.getElementById('commentsList');
+
+            if (commentInput.value.trim() === '') {
+                alert('Lütfen bir yorum yazın.');
+                return;
+            }
+
+            const newComment = document.createElement('li');
+            newComment.textContent = commentInput.value;
+            commentsList.appendChild(newComment);
+
+            commentInput.value = ''; // Yorum alanını temizle
+        }
+    </script>
+</body>
+</html>
